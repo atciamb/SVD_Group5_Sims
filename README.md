@@ -1,44 +1,44 @@
 ﻿# SVD Group 5 Simulations
 
-## Subsystem Folders
-- **ADCS_Sims**: Attitude Determination and Control System simulations (`adcs_sim.py`)
-- **Payload_Sims**: Payload simulations and analysis (`payload_sim.py`)
-- **Structures_Sims**: Structural and mechanical simulations (`structures_sim.py`)
-- **Thermal_Sims**: Thermal modeling and simulations (`thermal_sim.py`)
+## Folders
+- **`ADCS_Sims/`** – Attitude Determination & Control (`adcs_sim.py`)
+- **`Payload_Sims/`** – Payload analysis (`payload_sim.py`)
+- **`Structures_Sims/`** – Structural/mechanical (`structures_sim.py`)
+- **`Thermal_Sims/`** – Thermal modeling (`thermal_sim.py`)
 
 ---
 
-## 1. First-Time Workspace & Python Setup (VS Code)
+## 1. First-Time Setup (VS Code)
 
-### Step A: Clone the Repository
-Open the terminal in VS Code (`Ctrl + ~`) and run:
+**1. Clone & open in VS Code terminal (`Ctrl + ~`):**
 ```bash
-git clone https://github.com/atciamb/SVD_Group5_Sims.git
+git clone [https://github.com/atciamb/SVD_Group5_Sims.git](https://github.com/atciamb/SVD_Group5_Sims.git)
 cd SVD_Group5_Sims
 code .
 ```
 
-### Step B: Set Up the Isolated Python Environment (One Command)
-To install all required simulation packages into an isolated local `.venv` folder (without affecting your existing Python installation), run the setup script in your VS Code terminal:
+**2. Install isolated Python environment (`.venv`):**
+- **Windows:** `.\setup_env.bat`
+- **Mac/Linux:** `bash setup_env.sh`
 
-- **Windows (PowerShell / CMD):**
-  ```powershell
-  .\setup_env.bat
-  ```
-- **Mac / Linux:**
-  ```bash
-  bash setup_env.sh
-  ```
-
-> **Note:** Our `.vscode/settings.json` file automatically configures VS Code to use `.venv` as your Python interpreter and activates it whenever you open a new terminal (`(.venv)` will appear at the start of your prompt).
->
-> *Alternative VS Code GUI method:* Press `Ctrl + Shift + P`, type **Python: Create Environment**, select **Venv**, choose your Python version, and check `requirements.txt`.
+*VS Code automatically activates `.venv` via `.vscode/settings.json`.*
 
 ---
 
-## 2. Daily Git Commands Cheat Sheet
+## 2. Daily Git Cheat Sheet
 
-### Before you start working (Download teammates latest updates)
-Always run this first before editing files so your workspace is up to date:
-```bash
-git pull
+- **Get latest updates (run before working):**
+  ```bash
+  git pull
+  ```
+- **Upload your changes:**
+  ```bash
+  git add .
+  git commit -m "Describe changes"
+  git push
+  ```
+- **Add a new Python package for the team:**
+  ```bash
+  pip install <package_name>
+  pip freeze > requirements.txt
+  ```
