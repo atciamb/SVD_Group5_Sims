@@ -1,11 +1,11 @@
 #
 print("Plot using: x,y,title,x-axis,y-axis,marker type(none, *,o))")
-def p(x,y,title="Andrew Ciambella",xl="X-axis",yl="Y-axis",m='',L=None):
+def p(x,y,title="Generic Plot",xl="X-axis",yl="Y-axis",m='',L=None):
     """plots x,y,title xlabel ylabel"""
     import matplotlib.pyplot as plt
     import numpy as np
     plt.plot(x,y,marker=m)
-    plt.title('Andrew Ciambella',fontsize=10)
+    plt.title('Generic Plot',fontsize=10)
     plt.suptitle(title)
     plt.xlabel(xl)
     plt.ylabel(yl)
@@ -14,7 +14,9 @@ def p(x,y,title="Andrew Ciambella",xl="X-axis",yl="Y-axis",m='',L=None):
         plt.axhline(y=L, color='red', linestyle='--', linewidth=2)
     plt.show()
     return None
-def p2(x,y,title="Andrew Ciambella",xl="X-axis",yl="Y-axis",y2=None):
+
+
+def p2(x,y,title="Generic Plot",xl="X-axis",yl="Y-axis",y2=None):
     """plots x,y,title xlabel ylabel, then x2"""
     import matplotlib.pyplot as plt
     plt.plot(x,y,color='blue',alpha=0.7)
