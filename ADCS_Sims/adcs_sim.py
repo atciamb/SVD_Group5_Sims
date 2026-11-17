@@ -75,3 +75,5 @@ ax2.legend()
 plt.tight_layout()
 plt.show()
 
+
+'''A note on how to add noise: '''
