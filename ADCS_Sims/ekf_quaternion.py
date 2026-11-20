@@ -16,7 +16,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from integrator2 import sol_q, t_f, rate_truth, omega_i, I, n_steps_truth, W_body 
-from quaternion_functions import calc_q_error
 
 
 
